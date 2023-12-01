@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="cadastro_produto.js"></script>
     <title>Lista de Produtos</title>
     <style>
         body {
@@ -17,8 +18,7 @@
             margin-top: 20px;
         }
 
-        td{
-            
+        td {
             background-color: #5a91a2;
         }
 
@@ -35,20 +35,43 @@
             background-color: #5a91a2;
         }
 
-        button {
+      
+        button.add {
             padding: 10px;
-            margin-top: 10px;
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 1s;
+        }
+
+        button.add:hover {
+            background-color: #45a049;
+        }
+
+        button.remove {
+            padding: 10px;
+            background-color: #FF4500; /* Vermelho */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 1s;
+        }
+
+        button.remove:hover {
+            background-color: #e74c3c;
+        }
+
+        button#botao {
+            padding: 10px;
             background-color: #dd693e;
-            transition: 1s;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 1s;
         }
 
-        
-
-        button:hover{
-            background-color:#b96243 ;
-        }
-
-        .texto{
+        .texto {
             color: rgb(220, 220, 220);
             border: #000000;
         }
@@ -57,6 +80,12 @@
 <body>
 
 <h1 class="texto">Lista de Produtos</h1>
+
+<label for="orderSelect" class="texto">Ordenar por:</label>
+<select id="orderSelect" onchange="sortProducts()">
+    <option value="priceAsc">Valor (Menor para Maior)</option>
+    <option value="priceDesc">Valor (Maior para Menor)</option>
+</select>
 
 <form id="productForm">
     <label for="productName" class="texto">Nome do Produto:</label>
@@ -71,52 +100,22 @@
     <label for="productPrice" class="texto">Valor de Venda:</label>
     <input type="number" id="productPrice" step="0.01" required>
 
-    <button type="button" id="botao" onclick="addProduct()">Adicionar Produto</button>
+    <button type="button" id="botao" class="add" onclick="addProduct()">Adicionar Produto</button>
 </form>
 
 <table id="productTable">
     <thead>
-    <tr>
-        <th>Nome</th>
-        <th>Quantidade</th>
-        <th>Valor de Compra</th>
-        <th>Valor de Venda</th>
-    </tr>
+        <tr>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Valor de Compra</th>
+            <th>Valor de Venda</th>
+            <th>Valor em Estoque</th>
+            <th>Ações</th>
+        </tr>
     </thead>
     <tbody>
     </tbody>
 </table>
-<script>
-    function addProduct() {
-        const productName = document.getElementById('productName').value;
-        const productQuantity = document.getElementById('productQuantity').value;
-        const productCost = document.getElementById('productCost').value;
-        const productPrice = document.getElementById('productPrice').value;
-
-        if (!productName || !productQuantity || !productCost || !productPrice) {
-            alert('Por favor, preencha todos os campos.');
-            return;
-        }
-
-        const table = document.getElementById('productTable').getElementsByTagName('tbody')[0];
-        const newRow = table.insertRow(table.rows.length);
-
-        const nameCell = newRow.insertCell(0);
-        const quantityCell = newRow.insertCell(1);
-        const costCell = newRow.insertCell(2);
-        const priceCell = newRow.insertCell(3);
-
-        nameCell.innerHTML = productName;
-        quantityCell.innerHTML = productQuantity;
-        costCell.innerHTML = `$${productCost}`;
-        priceCell.innerHTML = `$${productPrice}`;
-
-        document.getElementById('productName').value = '';
-        document.getElementById('productQuantity').value = '';
-        document.getElementById('productCost').value = '';
-        document.getElementById('productPrice').value = '';
-    }
-</script>
-
 </body>
 </html>
