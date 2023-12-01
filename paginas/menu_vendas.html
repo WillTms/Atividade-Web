@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Produto</title>
+    <link rel="stylesheet" type="text/css" href="menu_vendas.css">
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #253148;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #5A91A2;
+            margin: 100px 0 0 445px;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #Nome_funcionario {
+            width: 96%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #Nome_produto {
+            width: 96%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+
+        #Valor_venda {
+            width: 80%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #Valor_comissao {
+            width: 92%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-split {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .description {
+            margin-top: 20px;
+        }
+
+        .description label {
+            font-weight: bold;
+        }
+
+        .description textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #d47653;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            align-self: flex-end;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #b96243;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            align-self: flex-end;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <label for="Nome_funcionario">Nome do Funcionario</label>
+            <input type="text" id="Nome_funcionario" name="Nome_funcionario">
+        </div>
+
+        <div class="input-group">
+            <label for="Nome_produto">Nome do Produto</label>
+            <input type="text" id="Nome_produto" name="Nome_produto">
+        </div>
+
+        <div class="input-group">
+            <div class="input-split">
+                <div>
+                    <label for="Valor_venda">Valor de venda</label>
+                    <input type="text" id="Valor_venda" name="Valor_venda">
+                </div>
+                <div>
+                    <label for="Valor_comissao">Valor de Comissão</label>
+                    <input type="text" id="Valor_comissao" name="Valor_comissao">
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="Confirmar Venda">
+    </div>
+    
+</body>
+</html>
