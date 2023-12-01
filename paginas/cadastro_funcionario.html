@@ -5,11 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="cadastro_funcionario.css">
-    <script>
-        function cadastrar() {
-            window.alert("Funcionario Cadastrado")
-        }
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -82,6 +77,8 @@
             margin-top: 20px;
             align-self: flex-end;
         }
+
+       
     </style>
 </head>
 
@@ -113,7 +110,7 @@
                 <label for="senha">Senha:</label>
                 <input type="text" id="senha" name="senha" required>
             </div>
-            <input type="submit" name="acao" value="Cadastrar" onchange="cadastrar()">
+            <input type="submit" value="Cadastrar">
         </form>
     </div>
 </body>

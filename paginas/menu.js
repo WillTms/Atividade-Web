@@ -13,4 +13,3 @@ function openListaProdutos() {
 function performLogout() {
     window.location.href = "login.html";
 }
-

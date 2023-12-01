@@ -9,7 +9,7 @@ const produto = db.define(
             allowNull: false,
             primaryKey: true
         },
-        FORNECEDOR: {
+        NOME: {
             type: Sequelize.VARCHAR(200),
             allowNull: false
         },
