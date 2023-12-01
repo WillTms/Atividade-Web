@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="login.js"></script>
+    <title>login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #253148;
+        }
+
+        .container {
+            width: 400px;
+            margin: 110px 0 0 520px;
+            padding: 20px;
+            background-color: #5a91a2;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: #1e1e1e;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        .form-group {
+            margin: 10px 0;
+            color: #1e1e1e;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+       
+        input[type="submit"] {
+            background-color: #d47653;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            align-self: flex-end;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #b96243;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            align-self: flex-end;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="text" id="senha" name="senha" required>
+            </div>
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+</body>
+</html>
